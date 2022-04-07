@@ -7,6 +7,7 @@ import { useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import '../login.css';
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
@@ -55,8 +56,9 @@ const LoginForm = () => {
   };
 
   return (
-    <>
-      <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
+    <div class="login-section">
+      <div class="login-form">
+        <Form noValidate validated={validated} onSubmit={handleFormSubmit}>
         <Alert
           dismissible
           onClose={() => setShowAlert(false)}
@@ -65,9 +67,11 @@ const LoginForm = () => {
         >
           Something went wrong with your login credentials!
         </Alert>
-        <Form.Group>
-          <Form.Label htmlFor="email">Email</Form.Label>
+        <h1 class="login-header">Login</h1>
+        <Form.Group class="login-email">
+          <Form.Label class="form-email" htmlFor="email">Email</Form.Label>
           <Form.Control
+          class="form-input"
             type="text"
             placeholder="Your email"
             name="email"
@@ -80,9 +84,10 @@ const LoginForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
+        <Form.Group class="login-password">
+          <Form.Label class="form-password" htmlFor="password">Password</Form.Label>
           <Form.Control
+          class="form-input"
             type="password"
             placeholder="Your password"
             name="password"
@@ -95,14 +100,16 @@ const LoginForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Button
+        class="login-button"
           disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="success"
         >
           Submit
         </Button>
-      </Form>
-    </>
+        </Form>
+      </div>
+    </div>
   );
 };
 

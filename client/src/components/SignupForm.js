@@ -77,6 +77,7 @@ const SignupForm = () => {
         <Form.Group class="signup-username">
           <Form.Label htmlFor="username">Username</Form.Label>
           <Form.Control
+          class="form-input"
             type="text"
             placeholder="Your username"
             name="username"
@@ -92,6 +93,7 @@ const SignupForm = () => {
         <Form.Group class="signup-email">
           <Form.Label htmlFor="email">Email</Form.Label>
           <Form.Control
+          class="form-input"
             type="email"
             placeholder="Your email address"
             name="email"
