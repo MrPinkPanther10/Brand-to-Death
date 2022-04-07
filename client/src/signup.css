@@ -19,6 +19,23 @@
     border-radius: 5px;
 }
 
+.form-username {
+    font-size: 30px;
+}
+
+.form-email {
+    font-size: 30px;
+}
+
+.form-password {
+    font-size: 30px;
+}
+
+.form-input {
+    height: 30px;
+    margin-left: 20px;
+}
+
 .signup-username {
     padding: 50px;
 }

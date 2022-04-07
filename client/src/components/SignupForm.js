@@ -73,9 +73,9 @@ const SignupForm = () => {
         >
           Something went wrong with your signup!
         </Alert>
-
+        <h1 class="login-header">Sign Up</h1>
         <Form.Group class="signup-username">
-          <Form.Label htmlFor="username">Username</Form.Label>
+          <Form.Label class="form-username"htmlFor="username">Username</Form.Label>
           <Form.Control
           class="form-input"
             type="text"
@@ -91,7 +91,7 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group class="signup-email">
-          <Form.Label htmlFor="email">Email</Form.Label>
+          <Form.Label class="form-email" htmlFor="email">Email</Form.Label>
           <Form.Control
           class="form-input"
             type="email"
@@ -107,8 +107,9 @@ const SignupForm = () => {
         </Form.Group>
 
         <Form.Group class="signup-password">
-          <Form.Label htmlFor="password">Password</Form.Label>
+          <Form.Label class="form-password" htmlFor="password">Password</Form.Label>
           <Form.Control
+          class="form-input"
             type="password"
             placeholder="Your password"
             name="password"
